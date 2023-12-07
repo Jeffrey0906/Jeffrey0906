@@ -65,14 +65,15 @@ The image and font files in the same directory as the script.
 Go over key aspects of code in this section. Both link to the file, include snippets in this report (make sure to use the [coding blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)).  Grading wise, we are looking for that you understand your code and what you did. 
 At the beginning of my script, I set up the Pygame environment and the main game window:
 
-wheel-1.png
+
+![img.png](img.png)
 
 pygame.init():  Initializes all the Pygame modules.
 screen = pygame.display.set_mode((600, 600)):  Creates a window for displaying the game. Here, it's set to 600x600 pixels.
 pygame.display.set_caption('Wheel of Fortune'):  Sets the title of the game window.
 
 
-![img_7.png](img_7.png)
+![img_1.png](img_1.png)
 
 Then load and transform images for the game's background and the spinning hand:
 pygame.image.load(): Loads an image from a file.
@@ -80,7 +81,7 @@ pygame.transform.scale(): Scales the loaded image to the specified size.
 convert() and convert_alpha(): These are used to optimize the image for faster blitting (drawing) to the screen. convert_alpha() is used for images with transparency.
 
 
-![img_8.png](img_8.png)
+![img_2.png](img_2.png)
 
 The rewardfun function determines the prize level won by the player:
 This function generates a random number between 0 and 1.
@@ -88,7 +89,7 @@ It iterates through the rewarddict dictionary to find which prize range the rand
 It returns the corresponding prize level.
 
 
-![img_9.png](img_9.png)
+![img_3.png](img_3.png)
 
 start Function
 Handles the initial game display and awaits user interaction to start the game:
@@ -96,9 +97,8 @@ The function enters an infinite loop, listening for events like key presses or w
 It renders the initial game screen and waits for the player to press a key to start the game.
 
 
-![img_10.png](img_10.png)
-
-![img_11.png](img_11.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 
 middle Function
 Manages the spinning of the wheel:
@@ -106,7 +106,7 @@ It animates the spinning of the wheel by incrementally rotating the hand image.
 Once the spinning stops (determined by the angle), it calls rewardfun to determine the prize, then end to display the result
 
 
-![img_12.png](img_12.png)
+![img_6.png](img_6.png)
 
 end Function
 Displays the prize won by the player:
@@ -132,11 +132,9 @@ The game's ability to respond to user inputs, such as starting the game and hand
 ## Example Runs
 Explain how you documented running the project, and what we need to look for in your repository (text output from the project, small videos, links to videos on youtube of you running it, etc)
 
-![img_1.png](img_1.png)
-
-![img_2.png](img_2.png)
-![img_4.png](img_4.png)
-
+![img_8.png](img_8.png)
+![img_7.png](img_7.png)
+![img_9.png](img_9.png)
 
 ## Testing
 How did you test your code? What did you do to make sure your code was correct? If you wrote unit tests, you can link to them here. If you did run tests, make sure you document them as text files, and include them in your submission. 
@@ -155,11 +153,6 @@ Visual Inspection: The graphical elements like the spinning wheel, text renderin
 Prize Distribution: The randomness of the prize distribution was observed over multiple runs to ensure it felt fair and unpredictable.
 
 Error Handling: Attempted to induce errors, such as closing the game window unexpectedly, to ensure the game handles such scenarios gracefully.
-
-
-
-
-
 
 
 ## Missing Features / What's Next
